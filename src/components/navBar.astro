@@ -1,0 +1,23 @@
+---
+interface Props {
+  homeLink: string;
+  logo: string;
+}
+
+const { logo, homeLink } = Astro.props;
+---
+
+<div class="flex w-full justify-center">
+  <nav id="navBar" class="bg-opacity-60 backdrop-blur-xl border-2 border-stone-800 rounded-full flex fixed justify-evenly justify-self-center w-2/3 h-14 p-2 align-middle z-10">
+    <div class="w-1/2 pl-4">
+      <a href={homeLink} class=" w-10 h-10">
+        <img src={logo} alt="shorkLabs logo" class=" w-10 h-10">
+      </a>
+    </div>
+    <div class="w-1/2 text-right align-middle pr-4">
+      <a href="./" class="text-lg transition-all text-sky-400 underline hover:text-white">Home</a>
+    </div>
+  </nav>
+</div>
+
+ 
