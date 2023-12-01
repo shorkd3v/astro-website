@@ -1,5 +1,5 @@
 # astro-website
-this is a website built using astro (probably wont be updated a heck lot)
+this is a website built using astro (probably wont be updated a lot)
 
 feel free to use this garbage lol
 
