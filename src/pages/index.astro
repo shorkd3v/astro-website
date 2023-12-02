@@ -1,16 +1,58 @@
 ---
+// css 
 import '../styles/tailwind.css';
+import '../styles/tabler-icons.min.css';
+// import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200'; // uncommenting triggers an error
+
+// components 
+import NavBar from '../components/navBar.astro';
+import LinkBtn from '../components/linkBtn.astro';
+import ProfileCard from '../components/profilecard.astro';
+import Footer from '../components/footer.astro';
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="https://raw.githubusercontent.com/LordChebupelya/astro-blog/master/assets/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>_shork</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-black text-white h-screen w-screen p-4">
+		<NavBar 
+			logo="https://github.com/LordChebupelya/astro-blog/blob/47c89020ad8ad5906935917e3d710133b0798e75/assets/shark-apple.png?raw=true"
+			homeLink="/"
+			projectsLink="/projects"
+		/>
+		<div id="content" class="pt-20 text-center h-full flex flex-col justify-between">
+			<div class="mb-auto">
+				<!-- <h1 class="text-5xl">_shork</h1>
+				<h2 class="text-3xl">Website under construction &#128679;</h2> -->
+				<ProfileCard 
+					name="_shork"
+					username="@shork_dev"
+					img="https://avatars.githubusercontent.com/u/111064437?v=4"
+				/>
+			</div>
+			<br>
+			<Footer 
+				sourceUrl="https://github.com/LordChebupelya/astro-website"
+			/>
+			<!-- <footer class="absolute bottom-0 left-0 w-full h-auto bg-zinc-950 pt-4 space-x-2">
+				<LinkBtn 
+					title="Source"
+					icon="code"
+					url="https://github.com/LordChebupelya/astro-website"
+				/>
+				<br> <br>
+				<p class="text-lg text-zinc-500 font-mono">
+					made by _shork | libraries: 
+					<a href="https://tailwindcss.com" class="link-dark">tailwindcss</a>, 
+					<a href="https://astro.build" class="link-dark">astro</a>, and 
+					<a href="https://tablericons.com/" class="link-dark">tablericons</a>.
+				</p>
+			</footer> -->
+		</div>
 	</body>
 </html>

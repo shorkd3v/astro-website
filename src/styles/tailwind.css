@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.link {
+  @apply text-base sm:text-lg transition-all text-sky-400 underline hover:text-white md:after:content-['_↗'];
+}
+
+.link-dark {
+  @apply text-base sm:text-lg transition-all text-sky-400/50 underline hover:text-zinc-500 md:after:content-['_↗'];
+}
+
+.linkbtn {
+  @apply bg-black text-white text-base sm:text-lg transition-all hover:bg-white hover:text-black border-2 border-white rounded-full p-1 px-2;
+}
+
+.linkbtn-large {
+  @apply bg-black text-white text-lg sm:text-xl md:text-3xl transition-all hover:bg-white hover:text-black border-2 border-white rounded-full p-1 px-2;
+}
+
+.card {
+}
