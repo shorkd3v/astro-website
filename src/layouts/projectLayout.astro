@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  imageUrl: string;
+  bannerUrl: string;
+  downloadUrl: string;
+}
+
+const { title, description, imageUrl, bannerUrl, downloadUrl } = Astro.props;
+
+// layout
+import BaseLayout from "./baseLayout.astro";
+
+// components
+import DownloadBtn from "../components/downloadBtn.astro";
+---
+
+<BaseLayout>
+  <div class="md:w-[48rem] mx-auto text-left relative">
+    <div class="rounded-2xl bg-zinc-800 w-full md:-fit mx-auto">
+      <img src={bannerUrl} alt="project banner" class="w-fit h-48 sm:h-64 md:h-96 object-contain rounded-2xl brightness-75 border-zinc-600 border-2">
+    </div>
+    <div class="rounded-3xl w-32 h-32 border-zinc-600 border-2 absolute top-24 sm:top-40 md:top-72 left-6 md:left-12">
+      <img src={imageUrl} alt="project image" class="w-auto h-auto brightness-75 rounded-3xl">
+    </div>
+    <div class="px-6 md:px-12 pt-8">
+      <h1 class="text-2xl md:text-4xl">{title}</h1>
+      <p class="text-lg md:text-xl">{description}</p>
+      <DownloadBtn 
+        title="Download"
+        url={downloadUrl}
+      />
+    </div>
+  </div>
+</BaseLayout>

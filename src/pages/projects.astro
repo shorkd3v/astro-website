@@ -1,35 +1,20 @@
 ---
-// css 
-import '../styles/tailwind.css';
-import '../styles/tabler-icons.min.css';
+import BaseLayout from '../layouts/baseLayout.astro';
 
 // components 
-import NavBar from '../components/navBar.astro';
-import LnkBtn from '../components/linkBtn.astro';
-import Footer from '../components/footer.astro';
+import LinkBtn from '../components/linkBtn.astro';
+import ProjectCard from '../components/projectCard.astro';
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="https://raw.githubusercontent.com/LordChebupelya/astro-blog/master/assets/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>_shork</title>
-	</head>
-  <body class="bg-black text-white h-screen w-screen p-4">
-    <NavBar 
-			logo="https://github.com/LordChebupelya/astro-blog/blob/47c89020ad8ad5906935917e3d710133b0798e75/assets/shark-apple.png?raw=true"
-			homeLink="/"
-      projectsLink="/projects"
-		/>
-    <div id="content" class="pt-20 text-center h-full flex flex-col justify-between">
-      <div class="mb-auto">
-        <h2 class="text-5xl">Under construction &#128679;</h2>
-      </div>
-      <Footer 
-				sourceUrl="https://github.com/LordChebupelya/astro-website"
-			/>
-    </div>
-  </body>
-</html>
+<BaseLayout>
+  <h2 class="text-5xl">Projects</h2>
+  <h3 class="text-3xl">the complete garbage i make</h3>
+  <br> <br>
+  <ProjectCard 
+    name="shorkHelper"
+    description="a simple, yet powerful, discord bot."
+    imageUrl="https://cdn.discordapp.com/avatars/1161319651863699536/d1fc87bdf132471985080903d2e3e7b3.webp?size=4096"
+    url="/projects/shorkHelper"
+  />
+</BaseLayout>
